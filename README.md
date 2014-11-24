@@ -193,4 +193,4 @@ $ npm publish
 
 ### Licensing
 
-All modules should be licensed under an [MIT](http://opensource.org/licenses/MIT).
+All modules should be licensed under an [MIT](http://opensource.org/licenses/MIT) license.
