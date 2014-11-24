@@ -122,6 +122,6 @@ $ npm version major -m "[UPDATE] bump version."
 ```
 
 Once published, the module should be versioned using [semantic versioning](http://semver.org/).
-*	Any new functionality which is __not__ API breaking should be communicated as a *minor* update; e.g., additional configuration options, etc.
 *	Any bug fixes should be *patches*.
-*	Any modified or new functionality which is API breaking should communicated as a *major* update.
+*	Any new functionality which is __not__ API breaking should be communicated as a *minor* update; e.g., additional configuration options, etc.
+*	Any modified or new functionality which is API breaking should be communicated as a *major* update.
