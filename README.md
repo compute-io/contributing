@@ -14,6 +14,7 @@ Compute.io
 1. 	[Tests](#tests)
 1. 	[Workflow](#workflow)
 1. 	[Versioning](#versioning)
+1. 	[Licensing](#licensing)
 
 
 ### Overview
@@ -188,3 +189,8 @@ $ npm version <major|minor|patch> -m "<message>"
 $ git push origin master
 $ npm publish
 ```
+
+
+### Licensing
+
+All modules should be licensed under an [MIT](http://opensource.org/licenses/MIT).
