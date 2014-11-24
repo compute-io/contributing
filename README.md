@@ -71,18 +71,24 @@ The following is a typical workflow when creating compute modules:
 1. 	Create a repository within the Github [organization](https://github.com/compute-io/).
 2. 	Enable [travis-ci](https://travis-ci.org/) and [coveralls](https://coveralls.io/).
 3. 	Create a new local directory.
+	
 	``` bash
 	$ mkdir <module_name>
 	$ cd <module_name>
 	```
+	
 4. 	Run the [generator](https://github.com/compute-io/generator-compute-io) and follow the prompts.
+	
 	``` bash
 	$ yo compute-io
 	```
+
 5. 	Open the project in your favorite text editor; e.g.,
+	
 	``` bash
 	$ subl .
 	```
+
 6. 	Edit the `README.md`. Define the module's behavior, including example code. Consider this writing a module [specification](http://www.joelonsoftware.com/articles/fog0000000036.html).
 7. 	Copy the example from the `README.md` to the examples file `./examples/index.js`. The executable example code may be modified for clarity and include additional cases, but should at least resemble the example provided in the `README.md`.
 8. 	Update the `package.json` __keywords__. Consider this search engine optimization.
@@ -94,22 +100,28 @@ The following is a typical workflow when creating compute modules:
 	*	What is the expected behavior?
 10. Implement the module in `./lib/index.js`.
 11. Run the tests against the module.
+
 	``` bash
 	$ make test-cov
 	```
+
 12. Fix broken tests and achieve __100%__ code coverage.
 13. Run the example code and confirm expected output.
+
 	``` bash
 	$ node ./examples/index.js
 	```
+
 14. Read through the module to ensure everything is correct (e.g., descriptions, code documentation, spelling, edge cases, etc).
 15. Commit and push the code to remote repository.
+
 	``` bash
 	$ git add -A
 	$ git commit -a
 	$ git commit
 	$ git push origin master
 	```
+
 16. Visit the Github repository. Read the `README.md` and ensure that everything is correct.
 17. After waiting for 1-2 minutes, [travis-ci](https://travis-ci.org/) should have attempted to build the module. Confirm that the build succeeded (the `README.md` badge should transition from `pending` to `passing`) and that [coveralls](https://coveralls.io/) received a code coverage report (the `README.md` badge should show the percent code coverage).
 18. Inform an organization [owner](https://github.com/kgryte) that the module is ready and a candidate for publishing. An owner will subsequently review the module and suggest any changes which need to be made before publishing and inclusion in the main library.
