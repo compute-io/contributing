@@ -21,7 +21,7 @@ Compute.io
 
 [Compute.io](https://github.com/compute-io) is a JavaScript computation library. Each library function is written as a standalone module which can be independently imported into any application or project.
 
-Monolithic libraries are beneficial in the sense that these libraries centralize a codebase. Rarely, however, does one require all library functionality. All too often an application requires only one library function; in which case, the rest of the library is unnecessary and leads to code bloat.
+Monolithic libraries can be beneficial in the sense that these libraries centralize a codebase. Rarely, however, does one require all library functionality. All too often an application requires only one library function; in which case, the rest of the library is unnecessary and leads to code bloat.
 
 Compute.io is guided by three design principles: __composition__, __consistency__, and __rigor__.
 
