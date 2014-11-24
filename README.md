@@ -41,7 +41,8 @@ You have a couple of options...
 
 1. 	Create a module linked to your personal Github account and submit a pull request for inclusion in the main [compute.io](https://github.com/compute-io/compute.io) library.
 2. 	(__preferred option__) Ask an [owner](https://github.com/kgryte) if you can become a [compute-io](https://github.com/compute-io) member.
- 
+
+If you opt for option #1, note that all compute modules are expected to follow the same style guide described below.
 
 
 ### Style Guide
