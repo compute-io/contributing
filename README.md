@@ -86,7 +86,9 @@ $ subl .
 6. 	Edit the `README.md`. Define the module's behavior, including example code. Consider this writing a module [specification](http://www.joelonsoftware.com/articles/fog0000000036.html).
 7. 	Copy the example from the `README.md` to the examples file `./examples/index.js`. The executable example code may be modified for clarity and include additional cases, but should at least resemble the example provided in the `README.md`.
 8. 	Update the `package.json` __keywords__. Consider this search engine optimization.
-> If I were searching for this module, what search terms might I use?
+
+>	If I were searching for this module, what search terms might I use?
+
 9. 	Write tests against the `README.md` in `./test/test.js`.
 	* 	What are the expected input arguments? 
 	*	What is the output type?
