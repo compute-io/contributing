@@ -91,7 +91,7 @@ The following is a typical workflow when creating compute modules:
 
 6. 	Edit the `README.md`. Define the module's behavior, including example code. Consider this writing a module [specification](http://www.joelonsoftware.com/articles/fog0000000036.html).
 7. 	Copy the example from the `README.md` to the examples file `./examples/index.js`. The executable example code may be modified for clarity and include additional cases, but should at least resemble the example provided in the `README.md`.
-8. 	Update the `package.json` __keywords__. Consider this search engine optimization.
+8. 	Update the `package.json` __keywords__. Consider this [search engine optimization](https://www.npmjs.org/doc/files/package.json.html).
 	* 	If I were searching for this module, what search terms might I use?
 
 9. 	Write tests against the `README.md` in `./test/test.js`.
@@ -113,7 +113,7 @@ The following is a typical workflow when creating compute modules:
 	```
 
 14. Read through the module to ensure everything is correct (e.g., descriptions, code documentation, spelling, edge cases, etc).
-15. Commit and push the code to remote repository.
+15. Commit and push the code to the remote repository.
 
 	``` bash
 	$ git add -A
@@ -123,7 +123,7 @@ The following is a typical workflow when creating compute modules:
 	```
 
 16. Visit the Github repository. Read the `README.md` and ensure that everything is correct.
-17. After waiting for 1-2 minutes, [travis-ci](https://travis-ci.org/) should have attempted to build the module. Confirm that the build succeeded (the `README.md` badge should transition from `pending` to `passing`) and that [coveralls](https://coveralls.io/) received a code coverage report (the `README.md` badge should show the percent code coverage).
+17. After waiting for 1-2 minutes, [travis-ci](https://travis-ci.org/) should have attempted to build the module. Confirm that the build succeeded (the `README.md` badge should transition from `pending` to `passing`), and confirm that [coveralls](https://coveralls.io/) received a code coverage report (the `README.md` badge should show the percent code coverage).
 18. Inform an organization [owner](https://github.com/kgryte) that the module is ready and a candidate for publishing. An owner will subsequently review the module and suggest any changes which need to be made before publishing and inclusion in the main library.
 19. Once the module has been green-lighted, publish the module to [NPM](https://npmjs.org).
 	
@@ -131,7 +131,7 @@ The following is a typical workflow when creating compute modules:
 	$ npm publish
 	```
 
-20. If the module is stable (an owner will confirm this during the module review), bump the version to a stable status.
+20. If the module is stable (an owner will confirm this during the module review), bump the version to a stable status (1.0.0).
 
 	``` bash
 	$ npm version major -m "[UPDATE] bump version."
@@ -143,6 +143,9 @@ The following is a typical workflow when creating compute modules:
 	``` bash
 	$ npm publish
 	```
+
+
+### Versioning
 
 Once published, the module should be versioned using [semantic versioning](http://semver.org/).
 *	Any bug fixes should be *patches*.
