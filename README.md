@@ -17,7 +17,7 @@ Compute.io
 1. 	[Licensing](#licensing)
 
 
-### Overview
+## Overview
 
 [Compute.io](https://github.com/compute-io) is a JavaScript computation library. Each library function is written as a standalone module which can be independently imported into any application or project.
 
@@ -34,7 +34,7 @@ Compute.io is guided by three design principles: __composition__, __consistency_
 What follows is a guide to contributing to [Compute.io](https://github.com/compute-io).
 
 
-### Joining
+## Joining
 
 Have a great idea for a compute module or want to become more involved? Awesome. :)
 
@@ -46,7 +46,7 @@ You have a couple of options...
 If you opt for option #1, note that all compute modules are expected to follow the same style guide described below.
 
 
-### Style Guide
+## Style Guide
 
 All compute modules should follow the same JavaScript [style guide](https://github.com/kgryte/javascript-style-guide). Users should not have to decode styles to read and understand what matters: algorithms.
 
@@ -78,7 +78,7 @@ function mmean( win ) {
 ```
 
 
-### Getting Started
+## Getting Started
 
 Contributors are encouraged to use the [Yeoman](http://yeoman.io/) module [generator](https://github.com/compute-io/generator-compute-io). The generator automates many aspects of model generation by creating a base scaffold from which to build a compute module.
 
@@ -87,14 +87,14 @@ Before using the generator, you should create a remote repository on [Github](ht
 Additionally, before pushing code to Github, you should turn on continuous integration using [travis-ci](https://travis-ci.org/) and turn on code coverage using [coveralls](https://coveralls.io/). For the savvy, travis-ci can be [enabled](https://github.com/travis-ci/travis.rb#enable) from the command-line; just be sure to sync first.
 
 
-### Tests
+## Tests
 
 All modules __must__ instrument testing. Currently, [Mocha](http://visionmedia.github.io/mocha) is the preferred test framework with [Chai](http://chaijs.com) assertions. For code coverage, you are encouraged to use [Istanbul](https://github.com/gotwarlost/istanbul).
 
 If you use the Compute.io [generator](https://github.com/compute-io/generator-compute-io), the above test modules are included along with stubbed test code. All modules should have __100%__ code coverage.
 
 
-### Workflow
+## Workflow
 
 The following is a typical workflow when creating compute modules:
 
@@ -175,7 +175,7 @@ The following is a typical workflow when creating compute modules:
 	```
 
 
-### Versioning
+## Versioning
 
 Once published, the module should be versioned using [semantic versioning](http://semver.org/).
 *	Any bug fixes should be *patches*.
@@ -191,6 +191,6 @@ $ npm publish
 ```
 
 
-### Licensing
+## Licensing
 
 All modules should be licensed under an [MIT](http://opensource.org/licenses/MIT) license.
