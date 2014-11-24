@@ -50,7 +50,7 @@ function mmean( win ) {
 
 ### Getting Started
 
-Contributors are encouraged to use the [Yeoman](http://yeoman.io/) module [generator](https://github.com/compute-io/generator-compute-io). The generator automates many aspects of model generation, creating a base scaffold from which to build a compute module.
+Contributors are encouraged to use the [Yeoman](http://yeoman.io/) module [generator](https://github.com/compute-io/generator-compute-io). The generator automates many aspects of model generation by creating a base scaffold from which to build a compute module.
 
 Before using the generator, you should create a remote repository on [Github](https://github.com/compute-io). The generator will use the repository name to generate the remote URLs included in the `package.json` and `README.md`. Additionally, the generator takes care of setting the remote origin for the local Git repository, so you can begin pushing code to the [compute-io](https://github.com/compute-io) organization immediately after generation.
 
@@ -75,7 +75,10 @@ The following is a typical workflow when creating compute modules:
 $ mkdir <module_name>
 $ cd <module_name>
 ```
-4. 	Run the [generator](https://github.com/compute-io/generator-compute-io).
+4. 	Run the [generator](https://github.com/compute-io/generator-compute-io) and follow the prompts.
+``` bash
+$ yo compute-io
+```
 5. 	Open the project in your favorite text editor; e.g.,
 ``` bash
 $ subl .
@@ -119,7 +122,6 @@ $ npm version major -m "[UPDATE] bump version."
 ```
 
 Once published, the module should be versioned using [semantic versioning](http://semver.org/).
-
 	*	Any new functionality which is __not__ API breaking should be communicated as a *minor* update; e.g., additional configuration options, etc.
 	*	Any bug fixes should be *patches*.
 	*	Any modified or new functionality which is API breaking should communicated as a *major* update.
