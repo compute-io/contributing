@@ -152,7 +152,7 @@ Once published, the module should be versioned using [semantic versioning](http:
 *	Any new functionality which is __not__ API breaking should be communicated as a *minor* update; e.g., additional configuration options, etc.
 *	Any modified or new functionality which is API breaking should be communicated as a *major* update.
 
-Once a module is updated and its associated tests are passing, bump the version, commit to the remote repository, and publish.
+Once a module is updated and its associated tests are passing, bump the version, push to the remote repository, and publish.
 
 ``` bash
 $ npm version <major|minor|patch> -m "<message>"
