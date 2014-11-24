@@ -135,9 +135,24 @@ The following is a typical workflow when creating compute modules:
 
 	``` bash
 	$ npm version major -m "[UPDATE] bump version."
+	$ git push origin master
+	```
+
+21. Publish the updated module to [NPM](https://npmjs.org).
+	
+	``` bash
+	$ npm publish
 	```
 
 Once published, the module should be versioned using [semantic versioning](http://semver.org/).
 *	Any bug fixes should be *patches*.
 *	Any new functionality which is __not__ API breaking should be communicated as a *minor* update; e.g., additional configuration options, etc.
 *	Any modified or new functionality which is API breaking should be communicated as a *major* update.
+
+Once a module is updated and its associated tests are passing, bump the version, commit to the remote repository, and publish.
+
+``` bash
+$ npm version <major|minor|patch> -m "<message>"
+$ git push origin master
+$ npm publish
+```
