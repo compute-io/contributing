@@ -1,5 +1,22 @@
-Contributing
-============
+Compute.io
+==========
+
+> A contributing guide.
+
+
+## Table of Contents
+
+1. 	[Overview](#overview)
+1. 	[Joining](#joining)
+1. 	[Style Guide](#style-guide)
+	-	[Type Checking](#type-checking)
+1. 	[Getting Started](#getting-started)
+1. 	[Tests](#tests)
+1. 	[Workflow](#workflow)
+1. 	[Versioning](#versioning)
+
+
+### Overview
 
 [Compute.io](https://github.com/compute-io) is a JavaScript computation library. Each library function is written as a standalone module which can be independently imported into any application or project.
 
@@ -14,6 +31,17 @@ Compute.io is guided by three design principles: __composition__, __consistency_
 *	__Rigor__: testing and benchmarking should be priorities, not afterthoughts, and algorithms should be robust. Too many "numerical" libraries written in JavaScript implement poor algorithms, lack precision, and disregard performance.
 
 What follows is a guide to contributing to [Compute.io](https://github.com/compute-io).
+
+
+### Joining
+
+Have a great idea for a compute module or want to become more involved? Awesome. :)
+
+You have a couple of options...
+
+1. 	Create a module linked to your personal Github account and submit a pull request for inclusion in the main [compute.io](https://github.com/compute-io/compute.io) library.
+2. 	(__preferred option__) Ask an [owner](https://github.com/kgryte) if you can become a [compute-io](https://github.com/compute-io) member.
+ 
 
 
 ### Style Guide
