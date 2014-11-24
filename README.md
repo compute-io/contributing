@@ -76,7 +76,7 @@ The following is a typical workflow when creating compute modules:
 	$ mkdir <module_name>
 	$ cd <module_name>
 	```
-	
+
 4. 	Run the [generator](https://github.com/compute-io/generator-compute-io) and follow the prompts.
 	
 	``` bash
@@ -126,10 +126,13 @@ The following is a typical workflow when creating compute modules:
 17. After waiting for 1-2 minutes, [travis-ci](https://travis-ci.org/) should have attempted to build the module. Confirm that the build succeeded (the `README.md` badge should transition from `pending` to `passing`) and that [coveralls](https://coveralls.io/) received a code coverage report (the `README.md` badge should show the percent code coverage).
 18. Inform an organization [owner](https://github.com/kgryte) that the module is ready and a candidate for publishing. An owner will subsequently review the module and suggest any changes which need to be made before publishing and inclusion in the main library.
 19. Once the module has been green-lighted, publish the module to [NPM](https://npmjs.org).
+	
 	``` bash
 	$ npm publish
 	```
+
 20. If the module is stable (an owner will confirm this during the module review), bump the version to a stable status.
+
 	``` bash
 	$ npm version major -m "[UPDATE] bump version."
 	```
