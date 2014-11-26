@@ -164,7 +164,7 @@ The following is a typical workflow when creating compute modules...
 	$ git push origin <major.minor.patch>
 	```
 
-	where the `<major.minor.patch>` version is the same version published to NPM.
+	where the `<major.minor.patch>` version should be the same version published to NPM.
 
 21. If the module is stable (an owner will confirm this during the module review), bump the version to a stable status (e.g., `>=1.0.0`).
 
@@ -201,6 +201,7 @@ Once a module is updated and its associated tests are passing, bump the version,
 
 ``` bash
 $ npm version <major|minor|patch> -m "<message>"
+# => returns the new semver version
 $ git push origin master
 $ npm publish
 $ git tag -a <major.minor.patch> -m "[UPDATE] <release notes>."
