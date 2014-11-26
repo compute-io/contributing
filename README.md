@@ -201,7 +201,7 @@ Once a module is updated and its associated tests are passing, bump the version,
 
 ``` bash
 $ npm version <major|minor|patch> -m "<message>"
-# => returns the new semver version
+# => returns the new semver version <major.minor.patch>
 $ git push origin master
 $ npm publish
 $ git tag -a <major.minor.patch> -m "[UPDATE] <release notes>."
