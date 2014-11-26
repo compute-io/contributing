@@ -27,7 +27,7 @@ Compute.io is guided by three design principles: __composition__, __consistency_
 
 * 	__Composition__: standalone modules encourage flexible composition (build your own compute), constrained design (do one thing; do one thing well), and restraint (only use what you need).
 
-*	__Consistency__: the defining characteristic of a module should be its algorithms, not its choice of style. All modules should look and feel as if written by a single author.
+*	__Consistency__: all modules should look and feel as if written by a single author. A user should be free to focus on understanding algorithms without the distraction of arbitrary changes in style.
 
 *	__Rigor__: testing and benchmarking should be priorities, not afterthoughts, and algorithms should be robust. Too many "numerical" libraries written in JavaScript implement poor algorithms, lack precision, and disregard performance.
 
@@ -80,31 +80,25 @@ function mmean( win ) {
 
 ## Getting Started
 
-Contributors are encouraged to use the [Yeoman](http://yeoman.io/) module [generator](https://github.com/compute-io/generator-compute-io). The generator automates many aspects of model generation by creating a base scaffold from which to build a compute module.
+Contributors are encouraged to use the [Yeoman](http://yeoman.io/) module [generator](https://github.com/compute-io/generator-compute-io). The generator automates many aspects of module generation by creating a base scaffold from which to build a compute module.
 
-Before using the generator, you should create a remote repository on [Github](https://github.com/compute-io). The generator will use the repository name to generate the remote URLs included in the `package.json` and `README.md`. Additionally, the generator takes care of setting the remote origin for the local Git repository, so you can begin pushing code to the [compute-io](https://github.com/compute-io) organization immediately after generation.
+A couple of notes...
 
-Additionally, before pushing code to Github, you should turn on continuous integration using [travis-ci](https://travis-ci.org/) and turn on code coverage using [coveralls](https://coveralls.io/). For the savvy, travis-ci can be [enabled](https://github.com/travis-ci/travis.rb#enable) from the command-line; just be sure to sync first.
-
-
-## Tests
-
-All modules __must__ instrument testing. Currently, [Mocha](http://visionmedia.github.io/mocha) is the preferred test framework with [Chai](http://chaijs.com) assertions. For code coverage, you are encouraged to use [Istanbul](https://github.com/gotwarlost/istanbul).
-
-If you use the Compute.io [generator](https://github.com/compute-io/generator-compute-io), the above test modules are included along with stubbed test code. All modules should have __100%__ code coverage.
+1. 	Before using the generator, be sure to create a remote repository on [Github](https://github.com/compute-io). The generator will use the repository name to generate the remote URLs included in the `package.json` and `README.md`. Additionally, the generator takes care of setting the remote origin for the local Git repository, so you can begin pushing code to the [compute-io](https://github.com/compute-io) organization immediately after generation.
+2. 	Before pushing code to Github, be sure to turn on continuous integration using [travis-ci](https://travis-ci.org/), and be sure to turn on code coverage using [coveralls](https://coveralls.io/). For the savvy, travis-ci can be [enabled](https://github.com/travis-ci/travis.rb#enable) from the command-line; just ensure that you sync first.
 
 
 ## Workflow
 
-The following is a typical workflow when creating compute modules:
+The following is a typical workflow when creating compute modules...
 
 1. 	Create a repository within the Github [organization](https://github.com/compute-io/).
 2. 	Enable [travis-ci](https://travis-ci.org/) and [coveralls](https://coveralls.io/).
 3. 	Create a new local directory.
 	
 	``` bash
-	$ mkdir <module_name>
-	$ cd <module_name>
+	$ mkdir <repo_name>
+	$ cd <repo_name>
 	```
 
 4. 	Run the [generator](https://github.com/compute-io/generator-compute-io) and follow the prompts.
@@ -112,6 +106,8 @@ The following is a typical workflow when creating compute modules:
 	``` bash
 	$ yo compute-io
 	```
+
+	Note that the module name should follow the convention of the repository name being prefixed with `compute-`; .e.g., `compute-mean`, where `mean` is the repository name.
 
 5. 	Open the project in your favorite text editor; e.g.,
 	
@@ -189,6 +185,15 @@ $ npm version <major|minor|patch> -m "<message>"
 $ git push origin master
 $ npm publish
 ```
+
+
+## Tests
+
+All modules __must__ instrument testing. Currently, [Mocha](http://mochajs.org/) is the preferred test framework with [Chai](http://chaijs.com) assertions. For code coverage, you are encouraged to use [Istanbul](https://github.com/gotwarlost/istanbul).
+
+If you use the Compute.io [generator](https://github.com/compute-io/generator-compute-io), the above test modules are included along with stubbed test code. All modules should have __100%__ code coverage.
+
+
 
 
 ## Licensing
