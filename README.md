@@ -157,18 +157,37 @@ The following is a typical workflow when creating compute modules...
 	$ npm publish
 	```
 
-20. If the module is stable (an owner will confirm this during the module review), bump the version to a stable status (1.0.0).
+20. Create a new release by creating a new Git tag.
+
+	``` bash
+	$ git tag -a <major.minor.patch> -m "Initial release."
+	$ git push origin <major.minor.patch>
+	```
+
+	where the `<major.minor.patch>` version is the same version published to NPM.
+
+21. If the module is stable (an owner will confirm this during the module review), bump the version to a stable status (e.g., `>=1.0.0`).
 
 	``` bash
 	$ npm version major -m "[UPDATE] bump version."
 	$ git push origin master
 	```
 
-21. Publish the updated module to [NPM](https://npmjs.org).
+22. Publish the updated module to [NPM](https://npmjs.org).
 	
 	``` bash
 	$ npm publish
 	```
+
+23. Create a new release and push to the remote repository.
+
+	``` bash
+	$ git tag -a <major.minor.patch> -m "[UPDATE] <release notes>."
+	$ git push origin <major.minor.patch>
+	```
+
+	where, once again, the tagged release should match the version published to NPM.
+
 
 
 ## Versioning
@@ -184,6 +203,8 @@ Once a module is updated and its associated tests are passing, bump the version,
 $ npm version <major|minor|patch> -m "<message>"
 $ git push origin master
 $ npm publish
+$ git tag -a <major.minor.patch> -m "[UPDATE] <release notes>."
+$ git push origin <major.minor.patch>
 ```
 
 
