@@ -157,7 +157,7 @@ The following is a typical workflow when creating compute modules...
 	$ npm publish
 	```
 
-20. Create a new release by creating a new Git tag.
+20. Create a new release by creating a new Git [tag](http://git-scm.com/book/en/v2/Git-Basics-Tagging).
 
 	``` bash
 	$ git tag -a <major.minor.patch> -m "Initial release."
