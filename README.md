@@ -160,8 +160,8 @@ The following is a typical workflow when creating compute modules...
 20. Create a new release by creating a new Git [tag](http://git-scm.com/book/en/v2/Git-Basics-Tagging).
 
 	``` bash
-	$ git tag -a <major.minor.patch> -m "Initial release."
-	$ git push origin <major.minor.patch>
+	$ git tag -a v<major.minor.patch> -m "Initial release."
+	$ git push origin v<major.minor.patch>
 	```
 
 	where the `<major.minor.patch>` version should be the same version published to NPM.
@@ -179,14 +179,11 @@ The following is a typical workflow when creating compute modules...
 	$ npm publish
 	```
 
-23. Create a new release and push to the remote repository.
+23. By default, [`npm version`](https://docs.npmjs.com/cli/version) creates a new `git` tag when run on a `git` repository. To push the new tag to Github
 
 	``` bash
-	$ git tag -a <major.minor.patch> -m "[UPDATE] <release notes>."
-	$ git push origin <major.minor.patch>
+	$ git push origin --tags
 	```
-
-	where, once again, the tagged release should match the version published to NPM.
 
 
 
@@ -204,8 +201,7 @@ $ npm version <major|minor|patch> -m "<message>"
 # => returns the new semver version <major.minor.patch>
 $ git push origin master
 $ npm publish
-$ git tag -a <major.minor.patch> -m "[UPDATE] <release notes>."
-$ git push origin <major.minor.patch>
+$ git push origin --tags
 ```
 
 
